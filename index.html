@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PMBA Indy Guide</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #003366; color: white; padding: 1rem; text-align: center; }
+    .search-container { text-align: center; margin: 1rem; }
+    input[type="text"] { width: 80%; padding: 0.5rem; font-size: 1rem; }
+    .card { border: 1px solid #ddd; border-radius: 8px; margin: 1rem; padding: 1rem; }
+    .stars { color: gold; }
+    .review { font-style: italic; color: #444; margin-top: 0.5rem; }
+  </style>
+  <script>
+    function searchItems() {
+      let input = document.getElementById('search').value.toLowerCase();
+      let cards = document.getElementsByClassName('card');
+      for (let card of cards) {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? '' : 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>PMBA Indianapolis Guide</h1>
+  </header>
+  <div class="search-container">
+    <input type="text" id="search" onkeyup="searchItems()" placeholder="Search places..." />
+  </div>
+  <div class="card">
+    <h2>St. Elmo Steak House</h2>
+    <p>Famous for its shrimp cocktail and steaks.</p>
+    <div class="stars">★★★★★</div>
+    <div class="review">"Best steakhouse in Indy, hands down!"</div>
+  </div>
+  <div class="card">
+    <h2>Bluebeard</h2>
+    <p>Trendy spot with New American cuisine and cocktails.</p>
+    <div class="stars">★★★★☆</div>
+    <div class="review">"Creative dishes and great vibes."</div>
+  </div>
+  <div class="card">
+    <h2>Sun King Brewery</h2>
+    <p>Local brewery with a wide selection of craft beers.</p>
+    <div class="stars">★★★★☆</div>
+    <div class="review">"Perfect place to hang out with friends."</div>
+  </div>
+  <div class="card">
+    <h2>Indianapolis Zoo</h2>
+    <p>Popular attraction with animals, gardens, and an aquarium.</p>
+    <div class="stars">★★★★★</div>
+    <div class="review">"Fun for the whole family!"</div>
+  </div>
+</body>
+</html>
